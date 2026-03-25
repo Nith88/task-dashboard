@@ -27,10 +27,11 @@ function Tasks() {
   return (
     <main className="container px-4 py-8">
       <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Tasks</h2>
+      <p className="text-sm text-slate-600 mb-5">Showing top 10 tasks from JSONPlaceholder. Keep your workflow organized.</p>
       {loading && <p className="text-slate-500">Loading tasks...</p>}
       {error && <p className="text-red-600">{error}</p>}
       {!loading && !error && (
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} />
           ))}

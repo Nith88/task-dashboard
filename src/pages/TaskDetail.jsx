@@ -36,8 +36,8 @@ function TaskDetail() {
       {loading && <p className="text-slate-500">Loading task...</p>}
       {error && <p className="text-red-600">{error}</p>}
       {task && (
-        <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-2xl font-bold text-slate-900">Task #{task.id}</h2>
+        <section className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-sky-50 to-slate-50 p-6 shadow-2xl">
+          <h2 className="text-3xl font-extrabold text-slate-900">Task #{task.id}</h2>
           <p className="mt-3 text-slate-700">Title: {task.title}</p>
           <p className="text-slate-700">User ID: {task.userId}</p>
           <p className={`mt-2 inline-block rounded-full px-3 py-1 text-sm font-semibold ${task.completed ? 'bg-green-100 text-green-900' : 'bg-yellow-100 text-yellow-900'}`}>

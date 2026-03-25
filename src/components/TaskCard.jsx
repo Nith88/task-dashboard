@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom'
 
 function TaskCard({ task }) {
-  const statusClass = task.completed ? 'bg-green-100 text-green-900' : 'bg-yellow-100 text-yellow-900'
+  const statusClass = task.completed ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'
 
   return (
-    <article className="block border border-slate-200 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
-      <div className="flex items-start justify-between gap-4">
+    <article className="bg-gradient-to-br from-slate-50 to-white border border-transparent rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div>
           <h3 className="text-lg font-semibold text-slate-900">{task.title}</h3>
-          <p className="text-sm text-slate-600 mt-1">User ID: {task.userId}</p>
+          <p className="text-xs text-slate-500 uppercase tracking-wide mt-1">User ID: {task.userId}</p>
         </div>
-        <span className={`px-2 py-1 rounded text-xs font-medium ${statusClass}`}>{task.completed ? 'Completed' : 'Pending'}</span>
+        <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${statusClass}`}>{task.completed ? 'Completed' : 'Pending'}</span>
       </div>
       <Link
         to={`/tasks/${task.id}`}
-        className="mt-3 inline-block text-blue-600 hover:text-blue-700 text-sm font-medium"
+        className="mt-4 inline-flex items-center gap-1 text-teal-700 hover:text-teal-900 text-sm font-medium"
       >
         View details
       </Link>

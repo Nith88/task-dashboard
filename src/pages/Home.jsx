@@ -25,10 +25,10 @@ function Home() {
 
   return (
     <main className="container px-4 py-8">
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Welcome to your task dashboard</h2>
-      <p className="text-slate-700 mb-6">Stay focused with fresh advice and your task list.</p>
+      <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">Welcome to your task dashboard</h2>
+      <p className="text-slate-600 mb-6 max-w-xl">Stay focused with fresh advice and your task list. Use this dashboard as your central productivity hub.</p>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <section className="rounded-2xl border border-cyan-100 bg-gradient-to-r from-cyan-50 to-white p-6 shadow-xl">
         <h3 className="text-xl font-semibold mb-2">Daily advice</h3>
         {loading ? (
           <div className="text-slate-500">Loading advice...</div>
